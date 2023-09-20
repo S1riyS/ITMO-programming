@@ -1,4 +1,4 @@
-import static java.lang.Math.*;
+import java.lang.Math;
 
 public class Main {
     private static float randomInRange(float min, float max) {
@@ -20,9 +20,9 @@ public class Main {
                 float x = xArray[j];
 
                 double currentResult = switch ((int) cArray[i]) {
-                    case 3 -> cos(asin(pow(((x - 5.5) / 17), 2)));
-                    case 13, 15, 17, 19 -> pow(exp(pow(x, x)), (double) 1 / 3);
-                    default -> asin(pow(sin(exp(Math.cos(x))), 2));
+                    case 3 -> Math.cos(Math.asin(Math.pow(((x - 5.5) / 17), 2)));
+                    case 13, 15, 17, 19 -> Math.pow(Math.exp(Math.pow(x, x)), (double) 1 / 3);
+                    default -> Math.asin(Math.pow(Math.sin(Math.exp(Math.cos(x))), 2));
                 };
                 result[i][j] = currentResult;
             }
